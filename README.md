@@ -1,99 +1,58 @@
-// ***************************************************************
-// StringManips.j ava
+// ************************************************************
+// Student.java
 //
-// Test several methods for manipulating String objects
-// ***************************************************************
-
+// Define a student class that stores name, score on test 1, and
+// score on test 2. Methods prompt for and read in grades,
+// compute the average, and return a string containing student's info.
+// ************************************************************
 import java.util.Scanner;
 
-
-public class MainQuiz
+public class Student
 {
-	public static void main (String[] args)
+//declare instance data
+	String name;
+	int grade;
+	Scanner scan = new Scanner(System.in);
+// ---------------------------------------------
+//constructor
+// ---------------------------------------------
+public Student(String studentName)
+{
+	studentName = scan.nextLine();
+	name = studentName;
+
+}
+
+// ---------------------------------------------
+//inputGrades: prompt for and read in student's grades for test1 and test2.
+//Use name in prompts, e.g., "Enter's Joe's score for test1".
+// ---------------------------------------------
+public void inputGradeAverage()
+{
+	System.out.println("Enter " + name + "'s grade average: ");
+	grade = scan.nextInt();
+}
+
+// ---------------------------------------------
+//getAverage: compute and return the student's test average
+// ---------------------------------------------
+public double getAverage(double average)
+{
+	average = grade;
+	return average;
+}
+
+// ---------------------------------------------
+//getName: print the student's name
+// ---------------------------------------------
+public String getName()
+{
+	return name;
+}
+
+public String toString()
 	{
-		//constants
-		final int QUIT = 0;
+		System.out.println("Name: " + name + "grade: " + grade);
+	}
+}}
 
-		int Input;
-
-		//scanner
-		Scanner scan = new Scanner(System.in);
-
-		//loop for the whole program
-		while(Input != QUIT)
-		{
-			//call student method
-
-			//calldisplay menu method
-
-			Input = scan.nextInt();
-
-		}
-
-		///print
-		System.out.println();
-
-
-	}//end main method
-
-	public void display_menu()
-	{
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-
-	}// end menu method
-
-	public void student_menu(int input)
-	{
-		//get name
-		student_name = scan.nextLline();
-
-		//get class
-		student_class = scan.nextLine();
-
-		//get date
-		date = scan.nextInt();
-
-
-		//3 difficulties easy, medium, hard
-		if(difficulty = EASY)
-		{
-		 	//call questions method
-
-		}
-		else if(difficulty = MEDIUM)
-		{
-			//call questions method
-		}
-		else
-		{
-			//call questions method
-		}
-
-	}//end student menu method
-
-	public void questions_easy(int difficulty)
-	{
-		//list of questions here
-
-
-	}//end question method
-
-	public void questions_medium(int difficulty)
-	{
-		//list of questions here
-
-
-	}//end question method
-
-	public void questions_hard(int difficulty)
-	{
-		//list of questions here
-
-
-	}//end question method
-
-}end class
